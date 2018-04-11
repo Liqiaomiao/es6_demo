@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6中的箭头函数和扩展</title>
+</head>
+<body>
+<h5>一、默认值</h5>
+<h5>二、主动抛出错误</h5>
+<h5>三、函数中的严谨模式</h5>
+<p>我们在ES中就经常使用严谨模式来进行编程，但是必须写在代码最上边，相当于全局使用。在ES6中我们可以写在函数体中，相当于针对函数来使用</p>
+<pre>
+function add(a,b=1){
+    'use strict'
+    if(a == 0){
+        throw new Error('This is error');
+    }
+     return a+b;
+}
+
+console.log(add(1));
+</pre>
+<p>
+    上边的代码如果运行的话，你会发现浏览器控制台报错,这个错误的原因就是如果你使用了默认值，再使用严谨模式的话，就会有冲突，所以我们要取消默认值的操作，这时候你在运行就正常了。
+</p>
+<h5>四、箭头函数</h5>
+<p>
+    在箭头函数中，方法体内如果是两句话，那就需要在方法体外边加上{}括号
+    <br>
+    箭头函数中不可加new，也就是说箭头函数不能当构造函数进行使用。
+</p>
+<script src="../dist/ES6中的箭头函数和扩展.js"></script>
+</body>
+</html>

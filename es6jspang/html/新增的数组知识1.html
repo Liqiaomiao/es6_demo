@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b>一、Array.from(json)</b>
+<pre>
+var json = {
+    '0': 'jspang',
+    '1': '技术胖',
+    length: 2
+};
+ Array.from(json) // ["jspang", "技术胖"]
+</pre>
+<b>二、Array.of(一堆文本或变量)</b>
+<p></p>
+<b>三、find( )实例方法:</b>
+<p>在函数中如果找到符合条件的数组元素就进行return，并停止查找</p>
+
+<b>四、fill( )实例方法：</b>fill()也是一个实例方法，它的作用是把数组进行填充，它接收三个参数，第一个参数是填充的变量，第二个是开始填充的位置，第三个是填充到的位置。
+<p></p>
+<b>数组的遍历</b>
+<p>
+    这种形式比ES5的for循环要简单而且高效
+</p>
+<ul>
+    <li>输出数组的内容:let item of arr</li>
+    <li>输出数组索引：let index of arr.keys() </li>
+    <li>同时输出数组的内容和索引:let [index,val] of arr.entries()</li>
+</ul>
+<b>五、entries( )实例方法：</b>
+<pre>
+   entries()实例方式生成的是Iterator形式的数组，那这种形式的好处就是可以让我们在需要时用next()手动跳转到下一个值。
+    let arr=['jspang','技术胖','大胖逼逼叨']
+    let list=arr.entries();
+    console.log(list.next().value);
+    console.log(list.next().value);
+    console.log(list.next().value);
+</pre>
+<script src="../dist/新增的数组知识1.js"></script>
+</body>
+</html>
