@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h5>symbol的声明 Symbol()</h5>
+<h5>Symbol在对象中的应用:构建对象的key,调用key和赋值</h5>
+<h5>Symbol对象元素的保护作用：在对象中有很多值，但是循环输出时，并不希望全部输出，那我们就可以使用Symbol进行保护。</h5>
+<pre>
+//没有进行保护的写法：
+var obj={name:'jspang',skill:'web',age:18};
+
+for (let item in obj){
+    console.log(obj[item]);
+}
+</pre>
+<pre>
+ //现在我不想别人知道我的年龄，这时候我就可以使用Symbol来进行循环保护。
+let obj={name:'jspang',skill:'web'};
+let age=Symbol();
+obj[age]=18;
+for (let item in obj){
+    console.log(obj[item]);
+}
+console.log(obj);
+</pre>
+<script src="../dist/symbol在对象中的作用.js"></script>
+</body>
+</html>

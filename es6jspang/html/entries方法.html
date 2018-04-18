@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h5>entries() 方法返回一个新的Array Iterator对象，该对象包含数组中每个索引的键/值对。</h5>
+<ul>
+    <li>
+        <dl>
+            <dt>1、 Array Iterator</dt>
+            <dd>
+                <pre>
+ //返回
+Array Iterator {}
+         __proto__:Array Iterator
+         next:ƒ next()
+         Symbol(Symbol.toStringTag):"Array Iterator"
+         __proto__:Object
+
+                </pre>
+            </dd>
+        </dl>
+    </li>
+    <li>
+        <dl>
+            <dt>2、iterator.next()</dt>
+            <dd>
+ <pre>
+     //.next()返回
+{value: Array(2), done: false}
+          //done:false
+          //value:(2) [0, "a"]
+          // __proto__: Object
+
+ </pre>
+            </dd>
+            <dd>iterator.next()返回一个对象</dd>
+            <dd>
+                next.done 用于指示迭代器是否完成：在每次迭代时进行更新而且都是false, 直到迭代器结束done才是true。
+            </dd>
+            <dd>
+                next.value是一个["key":"value"]的数组，是返回的迭代器中的元素值。
+            </dd>
+        </dl>
+    </li>
+    <li>
+        <dl>
+            <dt>用处：二维数组按行排序</dt>
+        </dl>
+    </li>
+    <li>
+        <dl>用处:使用for…of 循环</dl>
+    </li>
+</ul>
+<script src="../src/entries方法.js"></script>
+</body>
+</html>
