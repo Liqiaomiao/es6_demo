@@ -16,7 +16,7 @@
     第一个花括号就相当于我们方法的主体，后边的花括号就是Proxy代理处理区域，相当于我们写钩子函数的地方。
     new Proxy（{
     },{
-        get:function(target,key,property){
+        get:function(target,key,property){     //在得到目标对象属性前所做的处理
             //target：得到的目标对象
             //key:目标的key，相当于对象的属性
         }
